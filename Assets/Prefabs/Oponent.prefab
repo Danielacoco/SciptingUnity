@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 65390174751402532}
   - component: {fileID: 23434623095076266}
   - component: {fileID: 54612553310259606}
+  - component: {fileID: 114290440407867754}
   m_Layer: 0
   m_Name: Oponent
-  m_TagString: Untagged
+  m_TagString: Oponent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,3 +109,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114290440407867754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1155783921433514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3025dd67542c47e18db032ca22261bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  health: 0
+  damage: 1
+  targetTransform: {fileID: 0}

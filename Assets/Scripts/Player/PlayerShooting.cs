@@ -13,7 +13,7 @@ public class PlayerShooting : MonoBehaviour {
 
 		var direction = pointAboveFloor - transform.position;
 		var shootRay = new Ray (this.transform.position, direction);
-		Debug.DrawRay (shootRay.origin, shootRay.direction * 100.1f, Color.cyan, 2);
+		//Debug.DrawRay (shootRay.origin, shootRay.direction * 100.1f, Color.cyan, 2);
 
 		Physics.IgnoreCollision (GetComponent<Collider> (), bullet.GetComponent<Collider> ());
 
@@ -23,7 +23,7 @@ public class PlayerShooting : MonoBehaviour {
 	void raycastOnMouseClick(){
 		RaycastHit hit;
 		Ray rayToFloor = Camera.main.ScreenPointToRay (Input.mousePosition);
-		Debug.DrawRay (rayToFloor.origin, rayToFloor.direction * 100.1f, Color.red, 2);
+		//Debug.DrawRay (rayToFloor.origin, rayToFloor.direction * 100.1f, Color.red, 2);
 
 		if (Physics.Raycast(rayToFloor,out hit, 100.0f, mask, QueryTriggerInteraction.Collide)){
 			shoot(hit);

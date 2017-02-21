@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
 	public event Action<Player> onPlayerDeath;
 
 	void collideWithOponent (Oponent oponent){
-		oponent.Attack (this);
+		oponent.Attack(this);
 		if (health <= 0) {
 			if (onPlayerDeath != null) {
 				onPlayerDeath (this);
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour {
 	void OnCollisionEnter(Collision colision){
 		Oponent op = colision.collider.gameObject.GetComponent<Oponent> (); 
 		if (op) {
-			collideWithOponent (op);
+			collideWithOponent(op);
 		}
 	}
 //	// Use this for initialization

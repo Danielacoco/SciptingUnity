@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour {
 		var playerObject = Instantiate (playerPrefab, new Vector3 (0, 0.5f, 0), Quaternion.identity) as GameObject;
 		var cameraRig = Camera.main.GetComponent<CameraRig> ();
 		cameraRig.target = playerObject;
-		oponentFactory.SpawnOponents (true);
+		oponentFactory.SpawnOponents(true);
 		playerObject.GetComponent<Player> ().onPlayerDeath += onPlayerDeath;
 	}
 	
