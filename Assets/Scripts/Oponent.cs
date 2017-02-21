@@ -27,14 +27,10 @@ public class Oponent : MonoBehaviour {
 		Destroy(this.gameObject);
 	}
 
+	public void Initialize(Transform target, float moveSpeed, int health){
+		this.targetTransform = target;
+		this.moveSpeed = moveSpeed;
+		this.health = health;
+	}
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

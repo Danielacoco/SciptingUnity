@@ -1,15 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Player : MonoBehaviour {
 
 	public int health = 3;
 
+	public event Action<Player> onPlayerDeath;
+
 	void collideWithOponent (Oponent oponent){
 		oponent.Attack (this);
 		if (health <= 0) {
-			//do something
+			if (onPlayerDeath != null) {
+				onPlayerDeath (this);
+			}
 		}
 		
 		
